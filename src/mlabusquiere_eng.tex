@@ -1,0 +1,11 @@
+\RequirePackage{ifthen}
+
+\newif\ifeng
+\newif\iffr
+
+\newcommand{\eng}[1]{\ifeng#1\fi}
+\newcommand{\fr}[1]{\iffr#1\fi}
+
+\engtrue
+
+\input{mlabusquiere_main.tex}

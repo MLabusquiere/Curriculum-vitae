@@ -1,0 +1,17 @@
+*.log
+*.aux
+*.bcf
+*.bib.bak
+*.dvi
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.tex.bak
+*.cls.bak
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+
+mlabusquiere_main.pdf

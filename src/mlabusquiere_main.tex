@@ -1,0 +1,266 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.1.2, 1 February 2017) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
+%%
+%% Compile with LuaLaTeX for best results. If you
+%% want to use XeLaTeX, you may need to install
+%% Academicons.ttf in your operating system's font
+%% folder.
+
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+
+% Change the font if you want to.
+
+% If using pdflatex:
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+\usepackage{hyperref}
+% If using xelatex or lualatex:
+% \setmainfont{Lato}
+
+% Change the colours if you want to
+\definecolor{Mulberry}{HTML}{72243D}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{Sepia}
+\colorlet{accent}{Mulberry}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+
+\begin{document}
+
+\fr{\name{Maxence Labusquière}}
+\eng{\name{Maxence Labusquiere}}
+\tagline{
+\fr{Ingénieur développeur}
+\eng{Developer engineer}
+}
+
+
+\fr{\photo{3.2cm}{MLabusquiere}}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{labusquiere@gmail.com}
+  \phone{+33 (0)6 67 02 10 42}
+  \mailaddress{38 Boulevard de Picpus, 75012 Paris}
+  %%Keep this jump
+  
+  \smallskip
+  \twitter{@mlabusquiere}
+  \github{github.com/mlabusquiere}
+  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+%   \orcid{orcid.org/0000-0000-0000-0000}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[mlabusquiere_p1_sidebar]{\fr{Expérience}\eng{Experience}}
+\fr{\cvevent{Zenika - Pôle IKI Consulting}{Consultant / Formateur}{Septembre 2014 -- Aujourd'hui}{Paris - France}}
+\eng{\cvevent{Zenika - IKI Consulting department}{Consultant / Trainer}{September 2014 -- Today}{Paris - France}}
+
+\eng{As a Zenika consultant during 4 years :}
+
+\begin{itemize}
+\fr{
+\item Animation d'une trentaine de séances formations
+\item Réalisation d'une douzaine de missions d'expertises courtes (RabbitMQ, Java, Jenkins)
+\item Contribution aux appels d'offre
+\item Participation au recrutement des consultants
+\item Animation d'événements pour la tribu Architecture
+}
+\eng{
+\item Animated more than 30 training sessions
+\item Realized dozen short expert missions (RabbitMQ, Java, Jenkins)
+\item Took part in calls for tender 
+\item Contributed to recruiting consultants
+\item Animated several internal architecture events
+}
+\end{itemize}
+
+\divider
+
+\fr{\cvevent{Altice (SFR) - PFS TV - Sekai}{Tech lead / Architecte - Consultant Zenika (Pôle Conseil)}{Mars 2017 -- Aujourd'hui}{Saint Denis - France}}
+\eng{\cvevent{Altice (SFR) - PFS TV - Sekai}{Tech lead / Architect - Zenika Consultant (IKI Consulting)}{March 2017 -- Today}{Saint Denis - France}}
+
+\fr{Sekai est l'équipe s'occupant de la refonte des backends de setup des objets IoT SFR et de toutes les applications autour de la TV}
+\eng{Sekai is the team that overhaul all backends concerning the tv setup}
+\begin{itemize}
+\fr{
+\item Recueil des besoins, analyse, développement, mise en production et suivi
+\item Accompagnement à la définition du socle technique et à son application
+\item Gestion des flux d'intégration de certains partenaires via Kafka
+\item Mise en place d'une architecture de command sourcing pour gérer les paramétrages de données
+\item Développement d'outils de test, d'un framework chassi
+}
+\eng{
+\item Analysed requirements, developed, deployed applications and monitored it
+\item Helped the team to define technical standards
+\item Defined partners integration flow using kafka
+\item Set up a CQRS system
+\item Developed test tools and a chassis framework (error handling, logs, ...)
+}
+\end{itemize}
+\printinfo{\faCode}{Java - SpringBoot \fr{écosystème}\eng{ecosystem} - Couchbase - Kafka - Docker - Swarm}
+Cucumber
+
+\divider
+
+\fr{\cvevent{Kuka Robotics - Gaia}{Tech lead / Scrum Master - Consultant Zenika (Pôle Conseil)}{Octobre 2016 -- Mars 2017}{Massy-Palaiseau - France}}
+\eng{\cvevent{Kuka Robotics - Gaia}{Tech lead / Scrum Master - Zenika Consultant (IKI Consulting)}{October 2016 -- March 2017}{Massy-Palaiseau - France}}
+\fr{Gaia est un framework permettant d'adapter sans développeurs les processus métiers du robot IIWA. IIWA est un des premiers robots collaboratifs respectant les normes industrielles}
+\eng{Support to the development of the Gaia framework. Gaia is a set of reusable components for their new collaborative IIWA robot and their new Sunrise platform}
+\begin{itemize}
+\fr{
+\item Introduction et mise en place des méthodes agiles (SCRUM)
+\item Conception et mise en place de l'architecture du framework Gaia
+\item Réalisation d'un projet de marouflage pour Renault
+}
+\eng{
+\item Introduced and implemented agile methods (SCRUM)
+\item Designed and realized the Gaia framework
+\item Created an application with Gaia framework to allow Renault to paste a part on a car door in motion
+}
+\end{itemize}
+\printinfo{\faCode}{Java - OSGI - Guice - Git - Maven - Eclipse - Jolokia - AngularJS}
+
+\divider
+
+
+\fr{ \cvevent{Infopro}{Auditeur - Consultant Zenika (Pôle Conseil)}{Septembre 2016}{Sceau - France}}
+\eng{\cvevent{Infopro}{Auditor - Zenika Consultant (IKI Consulting)}{September 2016}{Sceau - France}}
+\fr{Aide pour un audit sur l'usine logicielle et la livraison logicielle d'une quinzaine d'applications ayant pour objectif une migration vers une architecture microservices
+}
+\eng{Contributed to the audit of a fifteen applications software factory and of their delivery process, in order to migrate to a microservice architecture}
+
+\clearpage
+\cvsection[mlabusquiere_p2_sidebar]{Experience}
+%%\divider
+
+\fr{\cvevent{ENEDIS (ERDF) - LinkyCom - Projet Linky}{Développeur / Intégrateur - Consultant Zenika (Pôle Conseil)}{Juin 2015 -- Août 2016}{Puteau - France}}
+\eng{\cvevent{ENEDIS (ERDF) - LinkyCom - Linky Project}{Developer - Zenika Consultant (IKI Consulting)}{June 2015 -- August 2016}{Puteau - France}}
+\fr{Le projet LinkyCom est le tuyau de communication entre les 35 millions de compteurs intelligents Linky et les SI ENEDIS.}
+\eng{The LinkyCom project is the communication hub between the 35 million Linky smart electric meters and the ENEDIS SI}
+\begin{itemize}
+\fr{
+\item Rétro-engineering fonctionnel et refonte de l'architecture du code existant
+\item Mise en production et suivie de la production (Support niveau 3)
+\item Industrialisation des tests, du déploiement et de la supervision
+\item Formation et sensibilisation aux nouveaux processus et outils
+}
+\eng{
+\item Retro-engineered and overhauled existing code / architecture
+\item Developed internal testing tools, deployment tests, and supervision architecture
+\item Trained and raised awareness on new processes and tools 
+}
+\end{itemize}
+\printinfo{\faCode}{Java 8 - Spring - Jmxtrans - Graphite/Graphana - Rabbitmq - Ansible}
+Site Actif/Actif - Git - Maven -  Rpm
+
+\divider
+
+\fr{\cvevent{BNP CIB - Tresory ALMT - IT Core}{Développeur - Consultant Zenika}{Septembre 2014 
+-- Mai 2015}{Paris - France}}
+\eng{\cvevent{BNP CIB - Tresory ALMT - IT Core}{Developer - Zenika Consultant }{September 2014 -- May 2015}{Paris - France}}
+\fr{Conception et mise en place d'une usine logicielle pour les projets autour de Kondor (Application de gestion de trésorerie pour les salles de marché), utilisée par 60 développeurs (Inde/France).}
+\eng{Designed and implemented a software factory for projects around Kondor (Cash Management Application for trading rooms), used by 60 developers (India / France).}
+\begin{itemize}
+\fr{
+\item Mise en place de build Mock, d'un outillage développeur et de livraison par RPM, migration de CVS à SVN
+\item Conception et mise en oeuvre des processus de releases pour 900 modules (SQL, C, PHP , Java, Ksh, Tibco BusinessWork)
+\item Mise en place d'un système de promotion d’artéfacts et de gestion de configuration
+\item Formation et sensibilisation sur les nouveaux processus et outils
+}
+\eng{
+\item Designed and developed some tools based on Mock and RPM in the aim to harmonize the release process and the deployment of 900 modules (SQL, C, PHP , Java, Ksh, Tibco BusinessWork)
+\item Designed artifact and configuration promotion system 
+\item Trained and raised awareness on new processes and tools 
+}
+\end{itemize}
+\printinfo{\faCode}{Bash - Java - Jenkins - Nexus}
+
+\divider
+
+\fr{\cvevent{Devops / Vert.x}{Stagiaire Zenika}{Janvier - Août 2014}{Paris - France}}
+\eng{\cvevent{Devops / Vert.x}{Intern - Zenika}{January - August 2014}{Paris - France}}
+\begin{itemize}
+\fr{
+\item Aide à la mise en place de l'offre devops Zenika
+\item Création d’une plateforme d'intégration (Microservices) facilitant la mise en place du Continuous Delivery
+\item Étude de différents outils du développement (Maven, Gradle, Go ThoughtWork, Jenkins, Chef, Puppet, ect) et des méthodologies de la démarche DevOps
+}
+\eng{
+\item Helped to set up the new Zenika Devops offer
+\item Designed a solution and a DSL to facilitate continuous delivery using microservices architecture
+\item Analysed different development tools (Maven, Gradle, Go ThoughtWork, Jenkins, Chef, Puppet, ect) and devops methodology approaches
+}
+\end{itemize}
+\printinfo{\faCode}{Vert.x - MongoDB - Hazelcast - Antlr4 - Logstash - Kibana}
+
+\divider
+
+\fr{\cvevent{Fibre Optique / JEE}{Stagiaire Zenika}{Juin - Septembre 2013 }{Paris - France}}
+\eng{\cvevent{Optical Fiber / JEE}{Intern - Zenika}{June - Septembre 2013}{Paris - France}}
+\fr{Conception et création d’un prototype permettant de gérer les échanges inter opérateurs (définit par l’ARCEP) dans le cadre de la mutualisation de la fibre optique.}
+\eng{Prototyped an application to manage inter-operator exchanges (defined by ARCEP) as part of the fiber optics sharing.}
+\printinfo{\faCode}{MongoDB - AngularJS -  \fr{écosystème} Spring \eng{stack} - Jenkins - RabbitMQ}
+
+\divider
+
+\fr{\cvevent{Restauration}{Chef de rang}{2008 - 2013 }{France / Angleterre}}
+\eng{\cvevent{Restaurants}{Head waiter}{2008 - 2013 }{France / Great Britain}}
+\fr{Management d'une équipe de 3 personnes}
+\eng{Managed 3 staff members}
+
+%% If the NEXT page doesn't start with a \cvsection but you'd
+%% still like to add a sidebar, then use this command on THIS
+%% page to add it. The optional argument lets you pull up the
+%% sidebar a bit so that it looks aligned with the top of the
+%% main column.
+% \addnextpagesidebar[-1ex]{page3sidebar}
+
+
+\end{document}
