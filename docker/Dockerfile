@@ -5,12 +5,14 @@ FROM debian:9
 MAINTAINER labusquiere@gmail.com
 
 ENV DEBIAN_FRONTEND noninteractive
+RUN printf "deb http://ftp.fi.debian.org/debian/ buster main contrib non-free\ndeb-src http://ftp.fi.debian.org/debian/ buster main contrib non-free" > /etc/apt/sources.list.d/backports.list
 
 # Install all TeX and LaTeX dependences
 RUN apt-get update && \
   apt-get install --yes --no-install-recommends \
   git \
   ca-certificates \
+  icc-profiles \
   inotify-tools \
   lmodern \
   make \

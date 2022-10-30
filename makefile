@@ -3,14 +3,14 @@
 ######################
 
 srcdir=src
-buildir=target
+buildir=.
 
 init: 
 	git config core.hooksPath .githooks
 pdf: 
 	mkdir -p ${srcdir}/${buildir} ;\
 	cd ${srcdir} ;\
-	find \( -name '*fr.tex' -o -name '*eng.tex' \) -exec xelatex -halt-on-error -output-dir=${buildir} {} \;
+	find \( -name '*fr.tex' -o -name '*eng.tex' \) -exec xelatex -halt-on-error -shell-escape -output-dir=${buildir} {} \;
 
 install: 
 	find ${srcdir}/${buildir} -name '*.pdf' -exec cp {} . \;
@@ -20,7 +20,7 @@ view:
 	do \
 		mkdir -p ${srcdir}/${buildir} ;\
 		cd ${srcdir} ;\
-		find \( -name '*fr.tex' -o -name '*eng.tex' \) -exec xelatex -halt-on-error -output-dir=${buildir} {} \; ; \
+		find \( -name '*fr.tex' -o -name '*eng.tex' \) -exec xelatex -halt-on-error -shell-escape -output-dir=${buildir} {} \; ; \
 		cd - ;\
 	done
 
