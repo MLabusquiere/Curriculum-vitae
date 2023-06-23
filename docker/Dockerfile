@@ -1,10 +1,10 @@
 #: title  : mlab.io/xelatex
 #: author : "Maxence Labusquiere" <labusquiere@gmail.com>
 #: version: "0.0.0"
-FROM debian:9
-MAINTAINER labusquiere@gmail.com
+FROM debian:latest
+LABEL MAINTAINER=labusquiere@gmail.com
 
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 RUN printf "deb http://ftp.fi.debian.org/debian/ buster main contrib non-free\ndeb-src http://ftp.fi.debian.org/debian/ buster main contrib non-free" > /etc/apt/sources.list.d/backports.list
 
 # Install all TeX and LaTeX dependences
@@ -16,8 +16,9 @@ RUN apt-get update && \
   inotify-tools \
   lmodern \
   make \
+  fonts-lato \
   texlive-fonts-recommended \
-  texlive-generic-recommended \
+  # texlive-generic-recommended \
   texlive-lang-english \
   texlive-lang-portuguese \
   texlive-xetex \
